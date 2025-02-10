@@ -3,8 +3,8 @@
 import serial
 import time
 
-cat_port = "/dev/ttyUSB0"
-cat_baud = 9600
+cat_port = "/dev/ttyFTCAT"
+cat_baud = 38400
 poll_interval = .25
 
 def cat(ser, req):
