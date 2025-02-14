@@ -23,21 +23,16 @@ If it can't find the serial module (`ModuleNotFoundError: No module named 'seria
 In RX:
 
 ```
-Sig:    83 [#####           ] S6 (-16 dB)
-ALC:     0 [                ] 0%
-Power:   0 [                ] 0.0 W
-SWR:     0 [                ] 1.00
-Idd:     0 [                ] 0.0 A
+RX Sig:    83 [#####           ] S6 (-16 dB)
 ```
 
 In TX:
 
 ```
-Sig:     0 [                ] S0 (-54 dB)
-ALC:   109 [######          ] 85%
-Power: 207 [############    ] 98.7 W
-SWR:    13 [                ] 1.13
-Idd:   115 [#######         ] 13.5 A
+TX ALC:   109 [######          ] 85%
+TX Power: 207 [############    ] 98.7 W
+TX SWR:    13 [                ] 1.13
+TX Idd:   115 [#######         ] 13.5 A
 ```
 
 You can see the meter name, raw value (from 0 to 255), graphical representation, and a more meaningful value, calculated from the raw one using calibration tables embedded in the script.

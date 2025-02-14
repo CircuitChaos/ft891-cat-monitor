@@ -134,14 +134,15 @@ while True:
     raw_swr = int(cat(ser, "RM6"))
     raw_idd = int(cat(ser, "RM7"))
 
-    print("Sig:   %s" % get_sig(raw_sig))
-    # print("Comp:  %s" % get_cmp(raw_cmp))
-    print("ALC:   %s" % get_alc(raw_alc))
-    print("Power: %s" % get_pwr(raw_pwr))
-    print("SWR:   %s" % get_swr(raw_swr))
-    print("Idd:   %s" % get_idd(raw_idd))
+    if raw_idd == 0:
+        print("RX Sig:   %s" % get_sig(raw_sig))
+    else:
+        print("TX ALC:   %s" % get_alc(raw_alc))
+        print("TX Power: %s" % get_pwr(raw_pwr))
+        print("TX SWR:   %s" % get_swr(raw_swr))
+        print("TX Idd:   %s" % get_idd(raw_idd))
+        print("")
 
-    print("")
     time.sleep(poll_interval)
 
 ser.close()
