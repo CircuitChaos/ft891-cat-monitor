@@ -91,6 +91,7 @@ def get_sig(raw_sig):
 def get_alc(raw_alc):
     cal = []
     cal.append([0, 0, ""])
+    cal.append([157, 100, ""])
     cal.append([255, 200, ""])
     result = interpolate(cal, raw_alc)
     return get_meter(raw_alc) + " %u%%" % interpolate(cal, raw_alc)[0]
